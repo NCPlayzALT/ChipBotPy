@@ -15,7 +15,7 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    if "luna" in message.content or "Luna" in message.content:
+    if "luna" in message.content or "Luna" in message.content and message.author != bot.user:
         await bot.send_message(message.channel, 'Luna? \U0001f440')
     if "Hello ChipBot!" in message.content:
         await bot.send_message(message.channel, 'Beep! Boop! I am ChipBot!')
